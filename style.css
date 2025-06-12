@@ -1,26 +1,3 @@
-.container{
-    display: flex;
-    text-align: center;
-    max-width: 650px;
-}
-.box1{
-    width: 100%;
-    height: 20%;
-    background-color: rgb(80, 80, 80);
-    padding: 40px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 25px;
-}
-
-input[type=search]{
-    border-radius: 5px;
-    outline: none;
-    border: 0px;
-    background-color:  rgb(80, 80, 80);
-    padding: 5px;
-}
-
 body {
     background-color: darkgray;
 }
@@ -89,46 +66,32 @@ body {
     text-align: center;
 }
 
-.listaSemData {
-    border: 3px solid black;
+.lista {
     margin-top: 1%;
     list-style: none;
+    width: 600px;
+    margin: auto;
 }
 
-.listaSemData li {
-    margin-top: 4px;
-    margin-bottom: 4px;
+.lista li {
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 3px;
 }
 
-.listaEssaSemana {
-    border: 3px solid black;
-    margin-top: 1%;
-    list-style: none;
+.listaCabeca {
+    display: flex;
+    align-items: center;
 }
 
-.listaEssaSemana li {
-    margin-top: 4px;
-    margin-bottom: 4px;
+.btnShowList {
+    margin-left: 10px;
 }
 
-.listaProxSemana {
-    border: 3px solid black;
-    margin-top: 1%;
-    list-style: none;
-}
-
-.listaProxSemana li {
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-.listaDepois {
-    border: 3px solid black;
-    margin-top: 1%;
-    list-style: none;
-}
-
-.listaDepois li {
-    margin-top: 4px;
-    margin-bottom: 4px;
+.lista ul {
+  padding: 0;
+  margin: 0;
 }

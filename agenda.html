@@ -9,30 +9,48 @@
 <body>
     <h1 class="tituloAgenda">Agenda geral</h1>
     <div class="listas">
-        <div class="semData">
-            <h3 style="text-align: center;">Sem data de entrega</h3>
+
+        <div id=semData class="lista">
+            <div class="listaCabeca">
+                <h3 class="listaTitle">Sem data de entrega</h3>
+                <button class="btnShowList" onclick="showSemData()">X</button>
+            </div>
             <ul class="listaSemData">
                 <li>Teste</li>
             </ul>
         </div>
-        <div class="essaSemana">
-            <h3 style="text-align: center;">Esta semana</h3>
-            <ul class="listaEssaSemana">
+
+        <div class="lista">
+            <div class="listaCabeca">
+                <h3 class="listaTitle">Essa semana</h3>
+                <button class="btnShowList" onclick="showSemana()">X</button>
+            </div>
+            <ul class="listaSemana">
                 <li>Teste</li>
             </ul>
         </div>
-        <div class="proxSemana">
-            <h3 style="text-align: center;">Proxima semana</h3>
+
+        <div class="lista">
+            <div class="listaCabeca">
+                <h3 class="listaTitle">Proxima semana</h3>
+                <button class="btnShowList" onclick="showProxSemana()">X</button>
+            </div>
             <ul class="listaProxSemana">
                 <li>Teste</li>
             </ul>
         </div>
-        <div class="depois">
-            <h3 style="text-align: center;">Depois</h3>
+
+        <div class="lista">
+            <div class="listaCabeca">
+                <h3 class="listaTitle">Depois</h3>
+                <button class="btnShowList" onclick="showDepois()">X</button>
+            </div>
             <ul class="listaDepois">
                 <li>Teste</li>
             </ul>
         </div>
+
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
