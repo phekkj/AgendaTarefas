@@ -20,3 +20,115 @@ input[type=search]{
     background-color:  rgb(80, 80, 80);
     padding: 5px;
 }
+
+body {
+    background-color: darkgray;
+}
+
+.nameT {
+    text-align: center;
+}
+
+.dTarefas {
+    border: 3px solid black;
+    border-radius: 21px;
+    padding: 1%;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.botaoMenu {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 21px;
+    top: 10px;
+    margin-left: 95%;
+    cursor: pointer;
+}
+
+.listaTD li {
+    list-style-type: none;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+    width: 88%;
+    margin-top: 1px;
+    text-align: left;
+}
+
+.dTitle {
+    text-align: center;
+    margin-top: -20px;
+}
+
+
+.menuOverlay {
+    display: none;
+    align-items: center;
+}
+
+.opcoes {
+    position: fixed;
+    top: 12.8%;
+    left: 86%;
+}
+
+.btOverlay {
+    border: 1px solid black;
+    margin-top: 1%;
+    width: 80%;
+}
+
+.mostrarOverlay {
+    display: flex;
+}
+
+.tituloAgenda {
+    text-align: center;
+}
+
+.listaSemData {
+    border: 3px solid black;
+    margin-top: 1%;
+    list-style: none;
+}
+
+.listaSemData li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.listaEssaSemana {
+    border: 3px solid black;
+    margin-top: 1%;
+    list-style: none;
+}
+
+.listaEssaSemana li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.listaProxSemana {
+    border: 3px solid black;
+    margin-top: 1%;
+    list-style: none;
+}
+
+.listaProxSemana li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.listaDepois {
+    border: 3px solid black;
+    margin-top: 1%;
+    list-style: none;
+}
+
+.listaDepois li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
