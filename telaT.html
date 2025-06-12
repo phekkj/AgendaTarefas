@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>telaInicial</title>
+</head>
+<body>
+    <h1 class="nameT">AgendAgora - a melhor agenda de tarefas!</h1>
+</body>
+
+
+<div class="dTarefas">
+    <button class="botaoMenu">+</button>
+    <h3 class="dTitle">Tarefas diarias</h3>
+    <input class="pesquisarTarefasD" placeholder="Pesquisar...">
+    <ul class="listaTD">
+        <li>teste</li>
+        <li>dada</li>
+    </ul>
+    <div class="menuOverlay">
+        <div class="opcoes">
+            <button class="btOverlay">Nova Tarefa</button><br>
+            <button class="btOverlay">Editar Tarefas</button><br>
+            <button class="btOverlay" onclick="window.location.href='agenda.html'">Ver Agenda</button>
+        </div>
+    </div>
+</div>  
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const botaoMenu = document.querySelector('.botaoMenu');
+  const menuOverlay = document.querySelector('.menuOverlay');
+  
+  // Mostrar/ocultar overlay ao clicar no botão principal
+  botaoMenu.addEventListener('click', function(e) {
+    e.stopPropagation(); // Impede que o clique se propague
+    menuOverlay.classList.toggle('mostrarOverlay');
+  });
+  
+  // Fechar overlay ao clicar em qualquer lugar fora
+  document.addEventListener('click', function(e) {
+    if (!menuOverlay.contains(e.target) && e.target !== botaoMenu) {
+      menuOverlay.classList.remove('mostrarOverlay');
+    }
+  });
+});
+
+</script>
+</html>
