@@ -51,3 +51,27 @@ function showDepois() {
       item.style.display = item.style.display === "block" ? "none" : "block";
     });
   }
+
+function filtrarTarefas() {
+  var textoDigitado = document.getElementById("campoPesquisa").value;
+  var resultado = document.getElementById("resultado");
+  var encontrou = false;
+  var textoResultado = "";
+
+  for (var i = 1; i <= 10; i++) {
+    var item = document.getElementById("item" + i);
+
+    if (item) {
+      if (item.innerHTML.includes(textoDigitado)) {
+        textoResultado += "TAREFA ENCONTRADA: " + item.innerHTML + "<br>";
+        encontrou = true;
+      }
+    }
+  }
+
+  if (encontrou) {
+    resultado.innerHTML = textoResultado;
+  } else {
+    resultado.innerHTML = "TAREFA NÃO ENCONTRADA!";
+  }
+}

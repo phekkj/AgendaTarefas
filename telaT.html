@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>telaInicial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>telaInicial</title>
 </head>
+
 <body>
-    <h1 class="nameT">AgendAgora - a melhor agenda de tarefas!</h1>
-</body>
+  <h1 class="nameT">AgendAgora - a melhor agenda de tarefas!</h1>
 
-
-<div class="dTarefas">
+  <div class="dTarefas">
     <button class="botaoMenu">+</button>
     <h3 class="dTitle">Tarefas diarias</h3>
-    <input class="pesquisarTarefasD" placeholder="Pesquisar...">
-    <ul class="listaTD">
-        <li>teste</li>
-        <li>dada</li>
-    </ul>
-    <div class="menuOverlay">
-        <div class="opcoes">
-            <button class="btOverlay">Nova Tarefa</button><br>
-            <button class="btOverlay">Editar Tarefas</button><br>
-            <button class="btOverlay" onclick="window.location.href='agenda.html'">Ver Agenda</button>
-        </div>
-    </div>
-</div>  
 
-<script  src="script.js"></script>
+   
+    <input id="campoPesquisa" placeholder="Pesquisar...">
+    <button onclick="filtrarTarefas()">Buscar</button>
+
+
+    <ul class="listaTD">
+      <li id="item1">teste</li>
+      <li id="item2">dada</li>
+      <li id="item3">revisar projeto</li>
+      <li id="item4">revisar ferias</li>
+    </ul>
+
+
+    <p id="resultado"></p>
+
+
+    <div class="menuOverlay">
+      <div class="opcoes">
+        <button class="btOverlay">Nova Tarefa</button><br>
+        <button class="btOverlay">Editar Tarefas</button><br>
+        <button class="btOverlay" onclick="window.location.href='agenda.html'">Ver Agenda</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
