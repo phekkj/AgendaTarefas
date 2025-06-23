@@ -75,7 +75,7 @@ function filtrarTarefas() {
     resultado.innerHTML = "TAREFA NÃO ENCONTRADA!";
   }
 }
-
+// Função para criar uma nova tarefa
 function criarTarefa(){
   let tarefa = document.getElementById("nome").value;
   let descricao = document.getElementById("descricao").value;
@@ -95,12 +95,33 @@ function criarTarefa(){
     return;
   }
   tarefas.push(novaTarefa);
-  console.log("Nova tarefa criada:", novaTarefa);
-
-
-  localStorage.setItem("tarefa", tarefa);
-  localStorage.setItem("descricao", descricao); 
-  localStorage.setItem("data", data);
-  localStorage.setItem("importancia", importancia);
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
   alert("Tarefa criada com sucesso!");
+  
+  //limpa dps de salvar
+  document.getElementById("nome").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("data").value = "";
+  document.getElementById("importancia").value = "";
+
 }
+
+
+// Função para exibir as tarefas criadas
+function tarefashoje(){
+  let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+  let listaTarefas = document.getElementById("listaTarefas");
+  listaTarefas.innerHTML = ""; // Limpa a lista antes de exibir as tarefas
+
+  if (tarefas.length === 0) {
+    listaTarefas.innerHTML = "<li>Nenhuma tarefa criada.</li>";
+    return;
+  }
+
+  tarefas.forEach((tarefa, index) => {
+    let li = document.createElement("li");
+    li.textContent = `Tarefa: ${tarefa.tarefa}, Descrição: ${tarefa.descricao}, Data: ${tarefa.data}, Importância: ${tarefa.importancia}`;
+    listaTarefas.appendChild(li);
+  }); 
+}
+
