@@ -125,3 +125,23 @@ function tarefashoje(){
   }); 
 }
 
+function filtrarTarefas() {
+  const select = document.querySelector("#filtroImportancia");
+  const valorSelecionado = select.value;
+  const tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+  const lista = document.getElementById("listaTarefas");
+  lista.innerHTML = "";
+
+  tarefas.forEach((tarefa) => {
+    if (valorSelecionado === "" || tarefa.importancia === valorSelecionado) {
+      const li = document.createElement("li");
+     li.textContent = `Tarefa: ${tarefa.tarefa}, Descrição: ${tarefa.descricao}, Data: ${tarefa.data}, Importância: ${tarefa.importancia}`;
+      lista.appendChild(li);
+    }
+  });
+
+  if (lista.innerHTML === "") {
+    lista.innerHTML = "<li>Nenhuma tarefa encontrada.</li>";
+  }
+}

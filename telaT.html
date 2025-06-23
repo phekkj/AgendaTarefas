@@ -18,10 +18,17 @@
     <input id="campoPesquisa" placeholder="Pesquisar...">
     <button onclick="filtrarTarefas()">Buscar</button>
 
+    <select id="filtroImportancia" onchange="filtrarTarefas()">
+      <option value="">Todas as Importâncias</option>
+      <option value="baixa">Baixa</option>
+      <option value="media">Média</option>  
+      <option value="alta">Alta</option>
+     </select>
+ 
+
 
     <ul class="listaTD">
       <li id="listaTarefas"></li>
-
     </ul>
 
 
