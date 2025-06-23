@@ -75,3 +75,32 @@ function filtrarTarefas() {
     resultado.innerHTML = "TAREFA NÃO ENCONTRADA!";
   }
 }
+
+function criarTarefa(){
+  let tarefa = document.getElementById("nome").value;
+  let descricao = document.getElementById("descricao").value;
+  let data = document.getElementById("data").value;
+  let importancia = document.getElementById("importancia").value;
+
+  let novaTarefa ={
+    tarefa: tarefa,
+    descricao: descricao,
+    data: data,
+    importancia: importancia
+  };
+
+  let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+  if (!tarefa || !descricao || !data || !importancia) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+  tarefas.push(novaTarefa);
+  console.log("Nova tarefa criada:", novaTarefa);
+
+
+  localStorage.setItem("tarefa", tarefa);
+  localStorage.setItem("descricao", descricao); 
+  localStorage.setItem("data", data);
+  localStorage.setItem("importancia", importancia);
+  alert("Tarefa criada com sucesso!");
+}

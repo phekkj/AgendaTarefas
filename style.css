@@ -5,6 +5,44 @@ body {
 .nameT {
     text-align: center;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.tarefa{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.tarefa input[type="text"], input[type="date"] , select {
+    border-radius: 5px;
+    border: 1px solid #696767;
+    padding: 5px;
+    background-color:darkgray;
+    color: white;
+}
+.header{
+    text-align: center;
+}
+.criar{
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: #696767;
+    padding: 10px;
+    color: white;
+    border: 1px solid black;
+    transition: ease-in-out 500ms;
+}
+.criar:hover {
+    background-color: #c5c5c5;
+    cursor: pointer;
+}
+
 
 .dTarefas {
     border: 3px solid black;

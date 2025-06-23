@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Nova Tarefa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Nova Tarefa</h1>
+        <button class="criar" onclick="window.location.href='telaT.html'">Voltar</button> 
+    </div>
+   <div class="container">
+
+    <div class="tarefa">
+    <label for="nome">Nome da Tarefa:</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite o nome da tarefa">
+    </div>
+
+     <div class="tarefa">
+    <label for="descricao">Descrição:</label>
+    <input type="text" name="descricao" id="descricao" placeholder="Digite a descrição da tarefa">
+    </div>
+
+       <div class="tarefa">
+    <label for="data">Data:</label>
+    <input type="date" name="data" id="data">
+    </div>
+
+    <div class="tarefa">
+    <label for="importancia">Importância:</label>
+    <select name="importancia" id="importancia">
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>  
+    </select>
+    </div>
+
+    <button class="criar" onclick="criarTarefa()">Criar Tarefa</button>
+    
+        </div>
+        
+     <script src="script.js"></script>
+        
+</body>
+</html>
