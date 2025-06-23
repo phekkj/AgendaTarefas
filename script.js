@@ -122,7 +122,25 @@ function tarefashoje(){
     let li = document.createElement("li");
     li.textContent = `Tarefa: ${tarefa.tarefa}, Descrição: ${tarefa.descricao}, Data: ${tarefa.data}, Importância: ${tarefa.importancia}`;
     listaTarefas.appendChild(li);
-  }); 
+       
+    
+    const btnExcluir = document.createElement("button");
+    btnExcluir.textContent = "Excluir";
+    btnExcluir.className = "btnExcluir";
+    btnExcluir.onclick = function() {
+      excluirTarefa(index);
+    };
+
+    li.appendChild(btnExcluir);
+    listaTarefas.appendChild(li);
+  });
+  ; 
+}
+function excluirTarefa(index) {
+  let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+  tarefas.splice(index, 1); // Remove 1 tarefa na posição index
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  tarefashoje(); // Atualiza a lista na tela
 }
 
 function filtrarTarefas() {
